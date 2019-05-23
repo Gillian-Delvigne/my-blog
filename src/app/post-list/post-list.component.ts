@@ -9,6 +9,7 @@ export class PostListComponent implements OnInit {
 
   @Input() postTitle: string; 
   @Input() postDate: string; 
+  @Input() postContent: string; 
 
   constructor() { }
 
@@ -19,8 +20,12 @@ export class PostListComponent implements OnInit {
     return this.postTitle;
 }
 
-getDate() {
+  getDate() {
     return this.postDate;
+}
+
+  getContent() {
+    return this.postContent;
 }
 
 }

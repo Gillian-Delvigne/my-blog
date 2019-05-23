@@ -3,10 +3,8 @@
     <div class="col-xs-12">
       <h2>Posts</h2>
         <ul class="list-group">
-          <post-list *ngFor="let post of posts" [postTitle] = "post.title" [postDate] = "post.created_at"></post-list>
+          <post-list *ngFor="let post of posts" [postTitle] = "post.title" [postDate] = "post.created_at" [postContent] ="post.content"></post-list>
         </ul>
-
-        <button class="btn btn-success">Tout allumer</button>
     </div>
   </div>
 </div>
