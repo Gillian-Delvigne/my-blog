@@ -11,6 +11,9 @@ export class PostListComponent implements OnInit {
   @Input() postDate: string; 
   @Input() postContent: string; 
 
+  likeNumber = 0;
+  dislikeNumber = 0;
+
   constructor() { }
 
   ngOnInit() {
@@ -28,4 +31,11 @@ export class PostListComponent implements OnInit {
     return this.postContent;
 }
 
+  onLiker() {
+    this.likeNumber++;
+  }
+
+  onDisliker() {
+    this.dislikeNumber++;
+  }
 }

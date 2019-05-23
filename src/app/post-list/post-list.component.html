@@ -1,6 +1,6 @@
-<li [ngClass]="{'list-group-item': true}">
+<li [ngClass]="{'list-group-item': true, 'list-group-item-success': likeNumber > dislikeNumber, 'list-group-item-danger':  dislikeNumber > likeNumber}">
 <h4>{{ getTitle() }}</h4>
 <p>{{ getDate() }}</p>
 <p> {{ getContent() }}</p>
-<button class="btn btn-success">Like ({{ likeNumber }})</button>&nbsp;<button class="btn btn-danger">Dislike ({{ dislikeNumber }})</button>
+<button class="btn btn-success" (click)="onLiker()">Like ({{ likeNumber }})</button>&nbsp;<button class="btn btn-danger" (click)="onDisliker()">Dislike ({{ dislikeNumber }})</button>
 </li>
